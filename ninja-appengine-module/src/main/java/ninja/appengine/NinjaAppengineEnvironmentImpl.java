@@ -25,6 +25,7 @@ import ninja.utils.NinjaProperties;
 
 import org.apache.commons.lang.NotImplementedException;
 
+import com.google.appengine.api.blobstore.dev.LocalBlobstoreService;
 import com.google.appengine.api.datastore.dev.LocalDatastoreService;
 import com.google.appengine.api.search.dev.LocalSearchService;
 import com.google.appengine.repackaged.com.google.common.io.Files;
@@ -85,6 +86,8 @@ public class NinjaAppengineEnvironmentImpl implements
                 proxy.setProperty(LocalSearchService.USE_RAM_DIRECTORY,
                         Boolean.toString(true));
 
+                proxy.setProperty(LocalBlobstoreService.NO_STORAGE_PROPERTY,
+                        Boolean.toString(true));
             } else {
                 // write to disk:
 
@@ -203,7 +206,7 @@ public class NinjaAppengineEnvironmentImpl implements
 
     @Override
     public String getHostName() {
-        throw new NotImplementedException();
+        return "localhost";
     }
 
     @Override
