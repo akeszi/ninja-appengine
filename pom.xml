@@ -22,10 +22,23 @@
     <groupId>org.ninjaframework</groupId>
     <artifactId>ninja-appengine</artifactId>
     <packaging>pom</packaging>
-    <version>1.9.54</version>
+    <version>1.9.54-skawa-v1</version>
     <url>http://www.ninjaframework.org</url>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A module to make Ninja a joy to use with Google's AppEngine. Nina is a full stack web framework for Java.</description>
+
+    <distributionManagement>
+        <repository>
+            <id>skawa-artifactory-github</id>
+            <name>Skawa artifactory</name>
+            <url>https://arti.skawa.hu/artifactory/github-fork</url>
+        </repository>
+        <snapshotRepository>
+            <id>skawa-artifactory-github</id>
+            <name>Skawa artifactory</name>
+            <url>https://arti.skawa.hu/artifactory/github-fork</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <developers>
         <developer>
@@ -34,6 +47,12 @@
             <url>http://www.raphaelbauer.com</url>
             <roles>
                 <role>Lead Architect</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Attila Keszi</name>
+            <roles>
+                <role>Contributor</role>
             </roles>
         </developer>
     </developers>
@@ -125,7 +144,7 @@
             </plugins>
         </pluginManagement>
     </build>
-
+<!--
     <scm>
         <url>https://github.com/ninjaframework/ninja-appengine</url>
         <connection>scm:git://github.com/ninjaframework/ninja-appengine.git</connection>
@@ -145,18 +164,8 @@
             <archive>http://groups.google.com/group/ninja-framework</archive>
         </mailingList>
     </mailingLists>
-    
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-    
+-->
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
